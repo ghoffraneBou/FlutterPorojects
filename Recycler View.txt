@@ -1,5 +1,7 @@
 #if( ${PACKAGE_NAME}&&${PACKAGE_NAME}!="")package ${PACKAGE_NAME};
 
+//le code est modifié
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
