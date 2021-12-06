@@ -1,7 +1,7 @@
 #if( ${PACKAGE_NAME}&&${PACKAGE_NAME}!="")package ${PACKAGE_NAME};
 
 //le code est modifié
-//oui il est bien modifié
+//oui elle est bien modifiée
 
 import android.view.LayoutInflater;
 import android.view.View;
