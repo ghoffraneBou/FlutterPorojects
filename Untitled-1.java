@@ -1,0 +1,52 @@
+#if( ${PACKAGE_NAME}&&${PACKAGE_NAME}!="")package ${PACKAGE_NAME};
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.mvvmretrofit.R;
+
+import java.util.ArrayList;
+
+public class ${NAME} extends RecyclerView.Adapter<${NAME}.${ViewHolder_Name}>{
+
+
+    private ArrayList<${Model_NAME}> moviesList = new ArrayList<>();
+    @NonNull
+    @Override
+    public ${ViewHolder_Name} onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ${ViewHolder_Name}(LayoutInflater.from(parent.getContext().inflate(R.layout.${item_Name},parent,false)));
+    }
+
+
+    //3la kol Bind jdid il va changer le data qui se trouve dans ${ViewHolder_Name} function constructeur de la classe ${ViewHolder_Name}
+    @Override
+    public void onBindViewHolder(@NonNull ${ViewHolder_Name} holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return moviesList.size() ;
+    }
+
+
+    //pour remplir le arrayLisit
+    public void  setList(ArrayList<${Model_NAME}> movieList){
+        this.moviesList= moviesList;
+        notifyDataSetChanged();
+    }
+
+
+    public class ${ViewHolder_Name} extends  RecyclerView.ViewHolder {
+
+        public ${ViewHolder_Name}(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
+
+}
